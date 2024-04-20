@@ -13,21 +13,19 @@
     "format": "prettier --write src/",
     "lint:style": "stylelint **/*.{vue,css}",
     "prepare": "husky",
-    "lint:stage": "lint-staged"
+    "lint:stage": "lint-staged",
+    "test": "echo ui"
   },
   "lint-staged": {
     "*": [
       "prettier --write",
-      "git add",
-      "echo ui"
+      "pnpm run test"
     ],
     "*.{vue,ts}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*.{html,vue,css,sass,scss}": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ]
   },
   "dependencies": {
