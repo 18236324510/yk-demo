@@ -12,7 +12,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "lint:style": "stylelint **/*.{vue,css}",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint:stage": "lint-staged"
   },
   "lint-staged": {
     "*": [
