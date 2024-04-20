@@ -11,7 +11,23 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "lint:style": "stylelint **/*.{vue,css}"
+    "lint:style": "stylelint **/*.{vue,css}",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write",
+      "git add",
+      "echo ui"
+    ],
+    "*.{vue,ts}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,vue,css,sass,scss}": [
+      "stylelint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "pinia": "^2.1.7",
@@ -29,15 +45,18 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "husky": "^9.0.11",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
     "stylelint": "^16.3.1",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-standard": "^36.0.0",
+    "tsno": "^2.0.0",
     "typescript": "~5.4.0",
     "vite": "^5.2.8",
     "vite-plugin-vue-devtools": "^7.0.25",
-    "vue-tsc": "^2.0.11"
+    "vue-tsc": "^2.0.11",
+    "zx": "^8.0.2"
   }
 }
