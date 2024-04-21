@@ -5,6 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
+    <h1>崔云翔</h1>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -56,7 +57,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (width >= 1024px) {
+@media (width >=1024px) {
   header {
     display: flex;
     place-items: center;
